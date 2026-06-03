@@ -29,4 +29,11 @@
 
 ## 在线预览
 
-[https://yourusername.github.io/meigu](https://yourusername.github.io/meigu)
+项目已成功部署到 GitHub Pages！
+
+🔗 **预览地址**: [https://mozdam.github.io/meigu](https://mozdam.github.io/meigu)
+
+### 部署状态
+- ✅ GitHub 仓库：[https://github.com/mozdam/meigu](https://github.com/mozdam/meigu)
+- ✅ gh-pages 分支已推送
+- ✅ GitHub Pages 已启用
