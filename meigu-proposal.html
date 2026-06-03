@@ -1,0 +1,1440 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>莓咕 Méi Gū · IP 形象提案</title>
+  <meta name="description" content="莓咕——一只灵气草莓喵 IP 形象提案">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Ma+Shan+Zheng&family=Noto+Sans+SC:wght@300;400;500;700&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      /* === 配色 === */
+      --color-strawberry: #E63946;
+      --color-strawberry-soft: #F26674;
+      --color-cream: #FFF8F0;
+      --color-mint: #A8D5BA;
+      --color-mint-soft: #D4ECDD;
+      --color-dark: #2C2C2C;
+      --color-pink: #FFD6E0;
+      --color-pink-soft: #FFEAEF;
+
+      /* === 派生 === */
+      --color-bg: #FFF8F0;
+      --color-surface: #FFFFFF;
+      --color-surface-alt: #FFFBF5;
+      --color-text: #2C2C2C;
+      --color-muted: #6B6B6B;
+      --color-subtle: #A0A0A0;
+      --color-border: #F0E6DC;
+      --color-border-soft: #FAF1E8;
+
+      /* === 字体 === */
+      --font-display: 'WenyueType GutiFangsong (Non-Commercial Use)','ZCOOL KuaiLe', 'Ma Shan Zheng', cursive;
+      --font-body: 'Noto Sans SC', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      --font-mono: 'Inter', monospace;
+
+      /* === 间距（8 基础） === */
+      --space-1: 4px;
+      --space-2: 8px;
+      --space-3: 12px;
+      --space-4: 16px;
+      --space-5: 24px;
+      --space-6: 32px;
+      --space-7: 48px;
+      --space-8: 64px;
+      --space-9: 96px;
+      --space-10: 128px;
+
+      /* === 圆角 === */
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --radius-xl: 32px;
+      --radius-full: 9999px;
+
+      /* === 阴影 === */
+      --shadow-sm: 0 2px 8px rgba(44, 44, 44, 0.04);
+      --shadow-md: 0 8px 24px rgba(44, 44, 44, 0.06);
+      --shadow-lg: 0 16px 48px rgba(44, 44, 44, 0.08);
+      --shadow-color: 0 8px 24px rgba(230, 57, 70, 0.12);
+
+      /* === 容器 === */
+      --container-max: 1200px;
+      --container-narrow: 800px;
+    }
+
+    /* === Reset === */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background: var(--color-bg);
+      line-height: 1.7;
+      font-size: 16px;
+      font-weight: 400;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    img, svg { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; border: none; background: none; cursor: pointer; }
+
+    /* === Container === */
+    .container {
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 var(--space-5);
+    }
+    .container-narrow {
+      max-width: var(--container-narrow);
+      margin: 0 auto;
+      padding: 0 var(--space-5);
+    }
+    @media (min-width: 768px) {
+      .container, .container-narrow { padding: 0 var(--space-7); }
+    }
+
+    /* === HERO === */
+    .hero {
+      min-height: 100vh;
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background:
+        radial-gradient(ellipse at 50% 30%, rgba(255, 214, 224, 0.4) 0%, transparent 60%),
+        linear-gradient(180deg, var(--color-cream) 0%, var(--color-pink-soft) 100%);
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        radial-gradient(circle at 10% 20%, rgba(168, 213, 186, 0.15) 0%, transparent 30%),
+        radial-gradient(circle at 90% 80%, rgba(230, 57, 70, 0.08) 0%, transparent 30%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      padding: var(--space-7) 0;
+    }
+    .hero-eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--color-strawberry);
+      background: rgba(255, 255, 255, 0.6);
+      backdrop-filter: blur(8px);
+      padding: 6px 16px;
+      border-radius: var(--radius-full);
+      margin-bottom: var(--space-5);
+      font-weight: 500;
+    }
+    .hero-ip-name {
+      font-family: var(--font-display);
+      font-size: clamp(80px, 16vw, 180px);
+      color: var(--color-strawberry);
+      line-height: 0.9;
+      letter-spacing: 0.04em;
+      margin-bottom: var(--space-3);
+      text-shadow: 0 4px 24px rgba(230, 57, 70, 0.15);
+    }
+    .hero-pinyin {
+      font-family: 'Datatype','Inter', sans-serif;
+      font-size: clamp(18px, 2.4vw, 28px);
+      color: var(--color-muted);
+      font-weight: 300;
+      letter-spacing: 0.35em;
+      margin-bottom: var(--space-5);
+    }
+    .hero-subtitle {
+      font-size: clamp(15px, 1.8vw, 19px);
+      color: var(--color-dark);
+      font-weight: 400;
+      max-width: 480px;
+      margin: 0 auto var(--space-7);
+      line-height: 1.6;
+    }
+    .hero-character {
+      max-width: 280px;
+      margin: 0 auto;
+      animation: float 6s ease-in-out infinite;
+    }
+    .hero-character-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      border-radius: 24px;
+      filter: drop-shadow(0 20px 40px rgba(230, 57, 70, 0.12));
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+    .scroll-hint {
+      position: absolute;
+      bottom: var(--space-5);
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 12px;
+      color: var(--color-muted);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-2);
+      opacity: 0.7;
+    }
+    .scroll-hint::after {
+      content: "";
+      width: 1px;
+      height: 24px;
+      background: var(--color-strawberry);
+      animation: scrollLine 2s ease-in-out infinite;
+    }
+    @keyframes scrollLine {
+      0%, 100% { transform: scaleY(0.4); opacity: 0.4; }
+      50% { transform: scaleY(1); opacity: 1; }
+    }
+
+    /* === 眨眼动画 === */
+    .eye-blink {
+      transform-origin: center;
+      animation: blink 4.5s infinite;
+    }
+    @keyframes blink {
+      0%, 92%, 96%, 100% { transform: scaleY(1); }
+      94% { transform: scaleY(0.05); }
+    }
+
+    /* === SECTION === */
+    section {
+      padding: var(--space-9) 0;
+      position: relative;
+    }
+    @media (max-width: 768px) {
+      section { padding: var(--space-8) 0; }
+    }
+    .section-eyebrow {
+      text-align: center;
+      font-size: 11px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--color-strawberry);
+      font-weight: 500;
+      margin-bottom: var(--space-3);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(36px, 5.5vw, 64px);
+      color: var(--color-dark);
+      margin-bottom: var(--space-4);
+      text-align: center;
+      letter-spacing: 0.04em;
+      line-height: 1.1;
+    }
+    .section-title .accent { color: var(--color-strawberry); }
+    .section-lede {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto var(--space-8);
+      color: var(--color-muted);
+      font-size: 16px;
+      line-height: 1.7;
+    }
+    .section-divider {
+      width: 40px;
+      height: 3px;
+      background: var(--color-strawberry);
+      margin: 0 auto var(--space-7);
+      border-radius: var(--radius-full);
+    }
+
+    /* === 滚动渐入 === */
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    .reveal.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* === 名字区 === */
+    .name-block { text-align: center; }
+    .name-main {
+      font-family: var(--font-display);
+      font-size: clamp(80px, 14vw, 160px);
+      color: var(--color-strawberry);
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+    .name-pinyin {
+      font-family: 'Inter', sans-serif;
+      font-size: clamp(20px, 2.5vw, 28px);
+      color: var(--color-muted);
+      font-weight: 300;
+      letter-spacing: 0.3em;
+      margin-top: var(--space-3);
+    }
+    .name-decode {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+      max-width: 560px;
+      margin: var(--space-7) auto;
+    }
+    @media (max-width: 480px) {
+      .name-decode { grid-template-columns: 1fr; max-width: 280px; }
+    }
+    .name-decode-item {
+      background: var(--color-surface);
+      padding: var(--space-5);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .name-decode-item:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+    .name-decode-item .char {
+      font-family: var(--font-display);
+      font-size: 56px;
+      color: var(--color-strawberry);
+      line-height: 1;
+    }
+    .name-decode-item .char-meaning {
+      font-size: 14px;
+      color: var(--color-muted);
+      margin-top: var(--space-2);
+    }
+    .name-decode-item .char-desc {
+      font-size: 15px;
+      color: var(--color-dark);
+      margin-top: var(--space-2);
+      font-weight: 500;
+    }
+    .name-alt-label {
+      font-size: 13px;
+      color: var(--color-muted);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-3);
+    }
+    .name-alt {
+      display: flex;
+      gap: var(--space-3);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .name-alt .pill {
+      background: var(--color-pink);
+      color: var(--color-strawberry);
+      padding: 8px 22px;
+      border-radius: var(--radius-full);
+      font-size: 15px;
+      font-weight: 500;
+    }
+
+    /* === 设计理念 === */
+    .concept {
+      background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-pink-soft) 50%, var(--color-bg) 100%);
+    }
+    .concept-quote {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4.5vw, 48px);
+      color: var(--color-strawberry);
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto var(--space-7);
+      line-height: 1.4;
+      letter-spacing: 0.04em;
+    }
+    .concept-quote::before, .concept-quote::after {
+      content: "「";
+      color: var(--color-strawberry);
+      opacity: 0.4;
+      margin: 0 8px;
+    }
+    .concept-quote::after { content: "」"; }
+    .concept-body {
+      max-width: 720px;
+      margin: 0 auto;
+      font-size: 17px;
+      line-height: 2;
+      color: var(--color-dark);
+      text-align: justify;
+    }
+    .concept-body p + p { margin-top: var(--space-4); }
+    .highlight { color: var(--color-strawberry); font-weight: 500; }
+    .highlight-bg {
+      background: linear-gradient(180deg, transparent 60%, var(--color-pink) 60%);
+      padding: 0 4px;
+      font-weight: 500;
+    }
+
+    /* === 外观设定 === */
+    .ratio-section {
+      max-width: 640px;
+      margin: 0 auto var(--space-8);
+    }
+    .ratio-row {
+      display: grid;
+      grid-template-columns: 100px 1fr 60px;
+      align-items: center;
+      gap: var(--space-4);
+      margin-bottom: var(--space-4);
+    }
+    .ratio-label {
+      font-size: 14px;
+      color: var(--color-dark);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+    }
+    .ratio-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+    .ratio-bar {
+      height: 20px;
+      background: var(--color-border-soft);
+      border-radius: var(--radius-full);
+      overflow: hidden;
+      position: relative;
+    }
+    .ratio-fill {
+      height: 100%;
+      border-radius: var(--radius-full);
+      width: 0;
+      transition: width 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .ratio-percent {
+      text-align: right;
+      font-weight: 600;
+      color: var(--color-dark);
+      font-size: 15px;
+      font-family: 'Inter', sans-serif;
+    }
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-4);
+    }
+    .feature-card {
+      background: var(--color-surface);
+      padding: var(--space-5);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 1px solid var(--color-border-soft);
+    }
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--color-pink);
+    }
+    .feature-icon {
+      width: 88px;
+      height: 88px;
+      margin-bottom: var(--space-3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-pink-soft);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+    .feature-icon-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .feature-title {
+      font-weight: 500;
+      color: var(--color-dark);
+      margin-bottom: var(--space-1);
+      font-size: 16px;
+    }
+    .feature-position {
+      font-size: 11px;
+      color: var(--color-strawberry);
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-2);
+      font-weight: 500;
+    }
+    .feature-desc {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+
+    /* === 眼睛 · 重点 === */
+    .eye-section {
+      background: linear-gradient(180deg, var(--color-bg) 0%, #FFF0F3 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .eye-section::before {
+      content: "";
+      position: absolute;
+      top: 10%;
+      right: -100px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 214, 224, 0.5) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .eye-stage {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-8);
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    @media (max-width: 768px) {
+      .eye-stage { grid-template-columns: 1fr; gap: var(--space-7); }
+    }
+    .eye-svg-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-5);
+    }
+    .eye-svg {
+      width: 100%;
+      max-width: 380px;
+      filter: drop-shadow(0 16px 40px rgba(230, 57, 70, 0.15));
+    }
+    .eye-blink-big {
+      transform-origin: 200px 200px;
+      animation: blink 4.5s infinite;
+    }
+    .eye-points {
+      display: grid;
+      gap: var(--space-4);
+    }
+    .eye-point {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-4);
+      padding: var(--space-3) 0;
+    }
+    .eye-point-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      background: var(--color-strawberry);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 13px;
+      font-weight: 600;
+      font-family: 'Inter', sans-serif;
+    }
+    .eye-point-content { flex: 1; }
+    .eye-point-content strong {
+      color: var(--color-dark);
+      display: block;
+      margin-bottom: 2px;
+      font-weight: 500;
+    }
+    .eye-point-content span {
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+    .eye-avoid {
+      margin-top: var(--space-5);
+      padding: var(--space-4);
+      background: rgba(255, 255, 255, 0.6);
+      border-left: 3px solid var(--color-strawberry);
+      border-radius: var(--radius-sm);
+      font-size: 14px;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+    .eye-avoid strong { color: var(--color-strawberry); }
+
+    .eye-svg-note {
+      margin-top: var(--space-3);
+      font-size: 12px;
+      color: var(--color-muted);
+      letter-spacing: 0.04em;
+      text-align: center;
+      opacity: 0.85;
+    }
+    .eye-real {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-3);
+      padding: var(--space-4);
+      background: rgba(255, 255, 255, 0.7);
+      border-radius: var(--radius-md, 16px);
+    }
+    .eye-real-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-strawberry);
+      background: rgba(230, 57, 70, 0.08);
+      padding: 4px 12px;
+      border-radius: 999px;
+    }
+    .eye-real-frame {
+      width: 100%;
+      max-width: 360px;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      border-radius: 18px;
+      border: 1px solid rgba(230, 57, 70, 0.15);
+      background: #fff;
+      box-shadow: 0 12px 32px rgba(230, 57, 70, 0.08);
+    }
+    .eye-real-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 35%;
+      display: block;
+    }
+
+    /* === 性格 === */
+    .personality-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-4);
+    }
+    @media (max-width: 640px) {
+      .personality-grid { grid-template-columns: 1fr; }
+    }
+    .mbti-card {
+      background: linear-gradient(135deg, var(--color-strawberry) 0%, #FF6B7A 100%);
+      color: white;
+      padding: var(--space-6);
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 200px;
+      position: relative;
+      overflow: hidden;
+    }
+    .mbti-card::after {
+      content: "INFP";
+      position: absolute;
+      right: -20px;
+      bottom: -40px;
+      font-family: var(--font-display);
+      font-size: 160px;
+      color: rgba(255, 255, 255, 0.08);
+      line-height: 1;
+    }
+    .mbti-tag {
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      opacity: 0.8;
+      font-weight: 500;
+    }
+    .mbti-letters {
+      font-family: var(--font-display);
+      font-size: 72px;
+      line-height: 1;
+      margin-top: var(--space-3);
+      position: relative;
+      z-index: 1;
+    }
+    .mbti-name {
+      font-size: 14px;
+      opacity: 0.9;
+      margin-top: var(--space-2);
+      position: relative;
+      z-index: 1;
+    }
+    .catchphrase-card {
+      background: var(--color-pink);
+      padding: var(--space-5);
+      border-radius: var(--radius-md);
+    }
+    .catchphrase-tag {
+      font-size: 11px;
+      color: var(--color-strawberry);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-3);
+      font-weight: 500;
+    }
+    .catchphrase-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+    }
+    .catchphrase-list span {
+      background: white;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      font-size: 15px;
+      color: var(--color-dark);
+    }
+    .habit-card {
+      grid-column: span 2;
+      background: var(--color-surface);
+      padding: var(--space-5);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-soft);
+    }
+    @media (max-width: 640px) {
+      .habit-card { grid-column: span 1; }
+    }
+    .habit-tag {
+      font-size: 11px;
+      color: var(--color-strawberry);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      margin-bottom: var(--space-3);
+      font-weight: 500;
+    }
+    .habit-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: var(--space-3);
+    }
+    .habit-list li {
+      padding-left: 20px;
+      position: relative;
+      font-size: 15px;
+      color: var(--color-dark);
+    }
+    .habit-list li::before {
+      content: "·";
+      position: absolute;
+      left: 4px;
+      top: -2px;
+      color: var(--color-strawberry);
+      font-size: 24px;
+      line-height: 1;
+    }
+
+    /* === 名场面 === */
+    .scene-list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: grid;
+      gap: var(--space-4);
+    }
+    .scene-card {
+      display: flex;
+      gap: var(--space-4);
+      background: var(--color-surface);
+      padding: var(--space-5);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-soft);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      align-items: flex-start;
+    }
+    .scene-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+    .scene-num {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      background: var(--color-pink);
+      color: var(--color-strawberry);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 22px;
+    }
+    .scene-content { flex: 1; }
+    .scene-title {
+      font-size: 17px;
+      color: var(--color-dark);
+      margin-bottom: var(--space-1);
+      font-weight: 500;
+    }
+    .scene-desc {
+      color: var(--color-muted);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    /* === 延展 === */
+    .tier {
+      margin-bottom: var(--space-7);
+    }
+    .tier-header {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      margin-bottom: var(--space-4);
+    }
+    .tier-tag {
+      padding: 5px 14px;
+      border-radius: var(--radius-full);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+    }
+    .tier-tag.light { background: var(--color-mint); color: var(--color-dark); }
+    .tier-tag.medium { background: var(--color-pink); color: var(--color-strawberry); }
+    .tier-tag.heavy { background: var(--color-strawberry); color: white; }
+    .tier-name {
+      font-weight: 500;
+      color: var(--color-muted);
+      font-size: 14px;
+    }
+    .tier-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: var(--space-3);
+    }
+    .tier-item {
+      background: var(--color-surface);
+      padding: var(--space-4) var(--space-3);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--color-border-soft);
+      text-align: center;
+      font-size: 15px;
+      color: var(--color-dark);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .tier-item:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* === 视觉关键词 === */
+    .tags-section {
+      background: var(--color-pink-soft);
+    }
+    .tags-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-3);
+      justify-content: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .tag-pill {
+      background: var(--color-surface);
+      border: 2px solid var(--color-strawberry);
+      color: var(--color-strawberry);
+      padding: 12px 28px;
+      border-radius: var(--radius-full);
+      font-family: var(--font-display);
+      font-size: 22px;
+      letter-spacing: 0.05em;
+      transition: all 0.3s ease;
+    }
+    .tag-pill:hover {
+      background: var(--color-strawberry);
+      color: white;
+      transform: translateY(-2px);
+    }
+
+    /* === Footer === */
+    footer {
+      background: var(--color-dark);
+      color: var(--color-cream);
+      padding: var(--space-8) 0;
+      text-align: center;
+    }
+    footer .footer-quote {
+      font-family: var(--font-display);
+      color: var(--color-pink);
+      font-size: clamp(20px, 2.5vw, 26px);
+      margin-bottom: var(--space-5);
+      letter-spacing: 0.05em;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.4;
+    }
+    footer .meta {
+      font-size: 13px;
+      opacity: 0.6;
+      letter-spacing: 0.1em;
+    }
+    footer .meta span + span::before {
+      content: "·";
+      margin: 0 var(--space-2);
+      opacity: 0.5;
+    }
+    footer .heart {
+      display: inline-block;
+      color: var(--color-strawberry);
+      animation: heartBeat 1.5s ease-in-out infinite;
+    }
+    @keyframes heartBeat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ============ HERO ============ -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-eyebrow reveal">IP Character Proposal</div>
+      <h1 class="hero-ip-name reveal reveal-delay-1">莓咕</h1>
+      <div class="hero-pinyin reveal reveal-delay-2">M É I &nbsp; G Ū</div>
+      <p class="hero-subtitle reveal reveal-delay-3">身体可以躺平，但眼睛永远好奇</p>
+
+      <div class="hero-character reveal reveal-delay-4">
+        <img src="image/image-1780474818609.png" alt="莓咕 IP 形象" class="hero-character-img" />
+      </div>
+    </div>
+    <div class="scroll-hint">向下滚动</div>
+  </header>
+
+  <!-- ============ 名字 ============ -->
+  <section>
+    <div class="container-narrow">
+      <div class="section-eyebrow reveal">01 · Name</div>
+      <h2 class="section-title reveal">名字 · <span class="accent">莓咕</span></h2>
+      <div class="section-divider reveal"></div>
+
+      <div class="name-block reveal">
+        <div class="name-main">莓咕</div>
+        <div class="name-pinyin">Méi Gū</div>
+      </div>
+
+      <div class="name-decode reveal">
+        <div class="name-decode-item">
+          <div class="char">莓</div>
+          <div class="char-desc">草莓</div>
+          <div class="char-meaning">甜、圆润、少女感</div>
+        </div>
+        <div class="name-decode-item">
+          <div class="char">咕</div>
+          <div class="char-desc">猫咪的咕噜声</div>
+          <div class="char-meaning">慵懒、惬意、小奶音</div>
+        </div>
+      </div>
+
+      <div class="reveal" style="text-align:center;">
+        <div class="name-alt-label">备选名字</div>
+        <div class="name-alt">
+          <span class="pill">奶噗</span>
+          <span class="pill">噗噗莓</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 设计理念 ============ -->
+  <section class="concept">
+    <div class="container-narrow">
+      <div class="section-eyebrow reveal">02 · Concept</div>
+      <h2 class="section-title reveal">设计理念</h2>
+      <div class="section-divider reveal"></div>
+
+      <p class="concept-quote reveal">灵动小精灵 × 反差行为</p>
+
+      <div class="concept-body reveal">
+        <p>莓咕有一双<span class="highlight">水灵灵的大眼睛</span>，黑亮的瞳孔像玻璃弹珠一样水润。但它的身体永远是懒的——眼神能跟着小鱼干转 360 度，身体一寸都不挪。</p>
+        <p>这种<span class="highlight-bg">"眼动身不动"</span>的反差就是它的可爱核心。眼神充满灵气和好奇，行为却永远是佛系、淡定的，像一只活了很久很久的小精灵，对世间万物都充满兴趣，但行动力为零。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 外观设定 ============ -->
+  <section>
+    <div class="container">
+      <div class="section-eyebrow reveal">03 · Appearance</div>
+      <h2 class="section-title reveal">外观设定</h2>
+      <div class="section-divider reveal"></div>
+      <p class="section-lede reveal">克制用色，温暖质感。让莓咕一眼就被认出，又不会喧宾夺主。</p>
+
+      <div class="ratio-section reveal">
+        <div class="ratio-row">
+          <div class="ratio-label">
+            <span class="ratio-dot" style="background:#FFF8F0; border:1px solid #F0E6DC;"></span>
+            奶白
+          </div>
+          <div class="ratio-bar"><div class="ratio-fill" data-width="60" style="background:#FFF8F0; border:1px solid #F0E6DC;"></div></div>
+          <div class="ratio-percent">60%</div>
+        </div>
+        <div class="ratio-row">
+          <div class="ratio-label">
+            <span class="ratio-dot" style="background:#E63946;"></span>
+            草莓红
+          </div>
+          <div class="ratio-bar"><div class="ratio-fill" data-width="30" style="background:#E63946;"></div></div>
+          <div class="ratio-percent">30%</div>
+        </div>
+        <div class="ratio-row">
+          <div class="ratio-label">
+            <span class="ratio-dot" style="background:#A8D5BA;"></span>
+            草绿
+          </div>
+          <div class="ratio-bar"><div class="ratio-fill" data-width="10" style="background:#A8D5BA;"></div></div>
+          <div class="ratio-percent">10%</div>
+        </div>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <img src="image/hat.png" alt="草莓叶小帽" class="feature-icon-img" />
+          </div>
+          <div class="feature-position">头顶</div>
+          <div class="feature-title">草莓叶小帽</div>
+          <div class="feature-desc">一片完整草莓叶，造型像小帽子</div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <img src="image/ear.png" alt="草莓红短耳" class="feature-icon-img" />
+          </div>
+          <div class="feature-position">耳朵</div>
+          <div class="feature-title">草莓红短耳</div>
+          <div class="feature-desc">圆润短小，颜色是标志性的草莓红</div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <img src="image/eyes.png" alt="水灵灵大眼" class="feature-icon-img" />
+          </div>
+          <div class="feature-position">眼睛</div>
+          <div class="feature-title">水灵灵大眼</div>
+          <div class="feature-desc">占脸部 40-50%，灵气来源</div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <img src="image/face.png" alt="草莓籽腮红" class="feature-icon-img" />
+          </div>
+          <div class="feature-position">脸颊</div>
+          <div class="feature-title">草莓籽腮红</div>
+          <div class="feature-desc">2-3 颗凸起的小草莓籽代替腮红</div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <img src="image/nose.png" alt="心形小粉鼻" class="feature-icon-img" />
+          </div>
+          <div class="feature-position">鼻头</div>
+          <div class="feature-title">心形小粉鼻</div>
+          <div class="feature-desc">小巧可爱的心形，粉色更显软萌</div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <img src="image/body.png" alt="奶白圆滚滚" class="feature-icon-img" />
+          </div>
+          <div class="feature-position">身体</div>
+          <div class="feature-title">奶白圆滚滚</div>
+          <div class="feature-desc">绒毛质感，圆润、敦实、可抱</div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <img src="image/belly.png" alt="粉色软肚" class="feature-icon-img" />
+          </div>
+          <div class="feature-position">肚子</div>
+          <div class="feature-title">粉色软肚</div>
+          <div class="feature-desc">单独露出，奶白偏粉，撸猫圣地</div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <img src="image/tail.png" alt="红色小短尾" class="feature-icon-img" />
+          </div>
+          <div class="feature-position">尾巴</div>
+          <div class="feature-title">红色小短尾</div>
+          <div class="feature-desc">短而蓬，尖端是草莓红，懒洋洋</div>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-icon">
+            <img src="image/limbs.png" alt="短到看不见" class="feature-icon-img" />
+          </div>
+          <div class="feature-position">四肢</div>
+          <div class="feature-title">短到看不见</div>
+          <div class="feature-desc">小短腿，圆滚滚到几乎看不到</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 眼睛 · 重点 ============ -->
+  <section class="eye-section">
+    <div class="container">
+      <div class="section-eyebrow reveal">04 · Eyes</div>
+      <h2 class="section-title reveal">眼睛 · <span class="accent">灵气之源</span></h2>
+      <div class="section-divider reveal"></div>
+      <p class="section-lede reveal">莓咕的灵魂在眼睛。眼神是它和世界唯一的连接方式。</p>
+
+      <div class="eye-stage">
+        <div class="eye-svg-wrap reveal">
+          <svg class="eye-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-label="莓咕眼睛特写">
+            <defs>
+              <radialGradient id="irisGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#3D1E0A"/>
+                <stop offset="40%" stop-color="#5C2E0A"/>
+                <stop offset="75%" stop-color="#8B4513"/>
+                <stop offset="100%" stop-color="#C97A3F"/>
+              </radialGradient>
+              <radialGradient id="pupilGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#000000"/>
+                <stop offset="100%" stop-color="#1a0d05"/>
+              </radialGradient>
+              <radialGradient id="whiteGrad" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#FFFFFF"/>
+                <stop offset="100%" stop-color="#F5E8E0"/>
+              </radialGradient>
+            </defs>
+
+            <!-- 眼白（极少量） -->
+            <ellipse cx="200" cy="200" rx="180" ry="160" fill="url(#whiteGrad)"/>
+
+            <!-- 眨眼组（可眨眼） -->
+            <g class="eye-blink-big">
+              <!-- 虹膜外圈 -->
+              <circle cx="200" cy="200" r="140" fill="#3D1E0A" opacity="0.3"/>
+              <!-- 虹膜主体 -->
+              <circle cx="200" cy="200" r="130" fill="url(#irisGrad)"/>
+              <!-- 虹膜纹理（放射状） -->
+              <g opacity="0.5" stroke="#5C2E0A" stroke-width="1" fill="none">
+                <line x1="200" y1="80" x2="200" y2="120"/>
+                <line x1="200" y1="320" x2="200" y2="280"/>
+                <line x1="80" y1="200" x2="120" y2="200"/>
+                <line x1="320" y1="200" x2="280" y2="200"/>
+                <line x1="115" y1="115" x2="145" y2="145"/>
+                <line x1="285" y1="285" x2="255" y2="255"/>
+                <line x1="285" y1="115" x2="255" y2="145"/>
+                <line x1="115" y1="285" x2="145" y2="255"/>
+              </g>
+              <!-- 瞳孔 -->
+              <circle cx="200" cy="200" r="65" fill="url(#pupilGrad)"/>
+              <!-- 瞳孔反光圈 -->
+              <circle cx="200" cy="200" r="65" fill="none" stroke="#3D1E0A" stroke-width="2" opacity="0.4"/>
+              <!-- 主高光（左上） -->
+              <ellipse cx="155" cy="148" rx="35" ry="45" fill="white" opacity="0.95"/>
+              <ellipse cx="148" cy="140" rx="12" ry="18" fill="white"/>
+              <!-- 副高光（右下） -->
+              <ellipse cx="248" cy="248" rx="16" ry="22" fill="white" opacity="0.75"/>
+              <!-- 微型 sparkle -->
+              <circle cx="180" cy="205" r="5" fill="white"/>
+              <circle cx="225" cy="178" r="3" fill="white"/>
+              <circle cx="160" cy="225" r="2" fill="white" opacity="0.7"/>
+            </g>
+          </svg>
+        </div>
+
+        <div class="eye-real reveal reveal-delay-1">
+          <div class="eye-real-label">真实效果</div>
+          <div class="eye-real-frame">
+            <img src="image/image-1780474818609.png" alt="莓咕 IP 渲染图 · 真实效果" class="eye-real-img" />
+          </div>
+          <p class="eye-svg-note">下图为本案设计解构，真实效果见上方 Hero 渲染图</p>
+        </div>
+
+        <div class="eye-points reveal reveal-delay-1">
+          <div class="eye-point">
+            <div class="eye-point-num">1</div>
+            <div class="eye-point-content">
+              <strong>大小：占脸部 30-40%</strong>
+              <span>大到不真实，但这就是它的标志</span>
+            </div>
+          </div>
+          <div class="eye-point">
+            <div class="eye-point-num">2</div>
+            <div class="eye-point-content">
+              <strong>形状：接近正圆</strong>
+              <span>上下眼睑弧度大，圆润饱满</span>
+            </div>
+          </div>
+          <div class="eye-point">
+            <div class="eye-point-num">3</div>
+            <div class="eye-point-content">
+              <strong>虹膜：深棕到琥珀色渐变</strong>
+              <span>带温暖光泽，像琥珀糖珠</span>
+            </div>
+          </div>
+          <div class="eye-point">
+            <div class="eye-point-num">4</div>
+            <div class="eye-point-content">
+              <strong>瞳孔：黑亮深邃</strong>
+              <span>大瞳孔，水润反光</span>
+            </div>
+          </div>
+          <div class="eye-point">
+            <div class="eye-point-num">5</div>
+            <div class="eye-point-content">
+              <strong>高光：3 处</strong>
+              <span>主高光（左上 key light）+ 副高光（右下 fill light）+ 虹膜内 sparkle</span>
+            </div>
+          </div>
+          <div class="eye-point">
+            <div class="eye-point-num">6</div>
+            <div class="eye-point-content">
+              <strong>渲染方向</strong>
+              <span>Stylized toon shader + SSS 透光感，眼神像会说话</span>
+            </div>
+          </div>
+
+          <div class="eye-avoid">
+            <strong>避免：</strong>写实眼睛 / 眼白过多 / 瞳孔过小 / 死鱼眼 / 无神高光
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 性格设定 ============ -->
+  <section>
+    <div class="container">
+      <div class="section-eyebrow reveal">05 · Personality</div>
+      <h2 class="section-title reveal">性格设定</h2>
+      <div class="section-divider reveal"></div>
+      <p class="section-lede reveal">佛系、好奇、行动力为零。活在 0.5 倍速的小精灵。</p>
+
+      <div class="personality-grid">
+        <div class="mbti-card reveal">
+          <div>
+            <div class="mbti-tag">MBTI</div>
+            <div class="mbti-letters">INFP</div>
+          </div>
+          <div class="mbti-name">调停者 · 理想主义的小观察家</div>
+        </div>
+
+        <div class="catchphrase-card reveal reveal-delay-1">
+          <div class="catchphrase-tag">口头禅</div>
+          <div class="catchphrase-list">
+            <span>行吧</span>
+            <span>随便</span>
+            <span>……也不是不行</span>
+            <span>懒得理你</span>
+            <span>好像有点意思</span>
+            <span>哦？然后呢？</span>
+            <span>这样吗？</span>
+          </div>
+        </div>
+
+        <div class="habit-card reveal">
+          <div class="habit-tag">日常习性</div>
+          <ul class="habit-list">
+            <li>白天充电，半夜精神</li>
+            <li>对小鱼干超常反应</li>
+            <li>讨厌洗澡</li>
+            <li>讨厌剪指甲</li>
+            <li>喜欢被摸肚子</li>
+            <li>听到零食袋秒立耳</li>
+            <li>装睡必留一条缝</li>
+            <li>对新事物先瞪大眼</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 反差萌名场面 ============ -->
+  <section style="background: linear-gradient(180deg, var(--color-bg) 0%, var(--color-surface-alt) 100%);">
+    <div class="container">
+      <div class="section-eyebrow reveal">06 · Iconic Moments</div>
+      <h2 class="section-title reveal">反差萌名场面</h2>
+      <div class="section-divider reveal"></div>
+      <p class="section-lede reveal">五个让粉丝原地去世的瞬间。</p>
+
+      <div class="scene-list">
+        <div class="scene-card reveal">
+          <div class="scene-num">1</div>
+          <div class="scene-content">
+            <div class="scene-title">瞪鱼干 → 被牵着走</div>
+            <div class="scene-desc">大眼睛死死盯着小鱼干，然后整个身体被一寸一寸拖走，眼神依然没动过。</div>
+          </div>
+        </div>
+
+        <div class="scene-card reveal">
+          <div class="scene-num">2</div>
+          <div class="scene-content">
+            <div class="scene-title">灵动眼神追人</div>
+            <div class="scene-desc">眼神跟着主人转 360 度，主人伸手过来时，缓慢地、优雅地、闭上了眼。</div>
+          </div>
+        </div>
+
+        <div class="scene-card reveal">
+          <div class="scene-num">3</div>
+          <div class="scene-content">
+            <div class="scene-title">装睡必留缝</div>
+            <div class="scene-desc">眼睛闭着，但偷偷留一条缝偷看——被发现就立刻装得更死。</div>
+          </div>
+        </div>
+
+        <div class="scene-card reveal">
+          <div class="scene-num">4</div>
+          <div class="scene-content">
+            <div class="scene-title">零食袋一响</div>
+            <div class="scene-desc">听到零食袋声音 → 耳朵立起来 + 眼睛瞪圆 + 全员警戒。</div>
+          </div>
+        </div>
+
+        <div class="scene-card reveal">
+          <div class="scene-num">5</div>
+          <div class="scene-content">
+            <div class="scene-title">全身僵硬 + 大眼瞪圆</div>
+            <div class="scene-desc">看到讨厌的东西（黄瓜 / 洗澡盆 / 指甲刀），瞳孔放大的瞬间全身石化。</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 延展方向 ============ -->
+  <section>
+    <div class="container">
+      <div class="section-eyebrow reveal">07 · Extension</div>
+      <h2 class="section-title reveal">延展方向</h2>
+      <div class="section-divider reveal"></div>
+      <p class="section-lede reveal">三阶段节奏：先跑起来 → 再粉丝起来 → 最后验证商业化。</p>
+
+      <div class="tier reveal">
+        <div class="tier-header">
+          <span class="tier-tag light">Stage 1</span>
+          <span class="tier-name">轻量内容 · 先跑起来</span>
+        </div>
+        <div class="tier-items">
+          <div class="tier-item">表情包</div>
+          <div class="tier-item">头像 / 壁纸</div>
+          <div class="tier-item">短图文条漫</div>
+          <div class="tier-item">九宫格图文</div>
+        </div>
+      </div>
+
+      <div class="tier reveal">
+        <div class="tier-header">
+          <span class="tier-tag medium">Stage 2</span>
+          <span class="tier-name">中度衍生 · 粉丝起来后</span>
+        </div>
+        <div class="tier-items">
+          <div class="tier-item">治愈系语录海报</div>
+          <div class="tier-item">短视频 IP</div>
+          <div class="tier-item">番外小剧场</div>
+          <div class="tier-item">粉丝二创引导</div>
+        </div>
+      </div>
+
+      <div class="tier reveal">
+        <div class="tier-header">
+          <span class="tier-tag heavy">Stage 3</span>
+          <span class="tier-name">重度商业化 · 验证后</span>
+        </div>
+        <div class="tier-items">
+          <div class="tier-item">毛绒玩偶</div>
+          <div class="tier-item">盲盒 / 潮玩</div>
+          <div class="tier-item">联名 · 奶茶店</div>
+          <div class="tier-item">联名 · 零食</div>
+          <div class="tier-item">文具周边</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 视觉调性关键词 ============ -->
+  <section class="tags-section">
+    <div class="container">
+      <div class="section-eyebrow reveal">08 · Visual Tone</div>
+      <h2 class="section-title reveal">视觉调性</h2>
+      <div class="section-divider reveal"></div>
+
+      <div class="tags-wrap reveal">
+        <span class="tag-pill">软</span>
+        <span class="tag-pill">圆</span>
+        <span class="tag-pill">灵动</span>
+        <span class="tag-pill">治愈</span>
+        <span class="tag-pill">反差</span>
+        <span class="tag-pill">不完美</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ Footer ============ -->
+  <footer>
+    <div class="container-narrow">
+      <p class="footer-quote">灵感来自一颗想躺平却充满好奇的心和一只想被摸肚子的猫</p>
+      <p class="meta">
+        <span>制作人 · Moz & Alice</span>
+        <span>2026.06.03</span>
+        <span>Made with <span class="heart">♥</span></span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    // 滚动渐入
+    const reveals = document.querySelectorAll('.reveal');
+    const ratioFills = document.querySelectorAll('.ratio-fill');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    reveals.forEach((el) => observer.observe(el));
+
+    // ratio bar 动画
+    const ratioObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const fill = entry.target;
+          const width = fill.getAttribute('data-width');
+          requestAnimationFrame(() => {
+            fill.style.width = width + '%';
+          });
+          ratioObserver.unobserve(fill);
+        }
+      });
+    }, { threshold: 0.3 });
+
+    ratioFills.forEach((el) => ratioObserver.observe(el));
+  </script>
+
+</body>
+</html>
